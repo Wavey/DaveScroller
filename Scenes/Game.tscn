@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1armwev4c2nc"]
+
+[ext_resource type="PackedScene" uid="uid://b0ng1wosexwx3" path="res://Scenes/Level1.tscn" id="1_3exiq"]
+[ext_resource type="PackedScene" uid="uid://fnglq602dycv" path="res://Scenes/Player.tscn" id="2_sowtm"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_3exiq")]
+
+[node name="Player" parent="." instance=ExtResource("2_sowtm")]
+position = Vector2(136, 216)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

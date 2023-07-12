@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://fnglq602dycv"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_ugun5"]
+[ext_resource type="Texture2D" uid="uid://byrxhym44irda" path="res://Image/modular_ships.png" id="2_fw3lt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_houq0"]
+size = Vector2(28, 64)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ugun5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.607, 1)
+texture = ExtResource("2_fw3lt")
+region_enabled = true
+region_rect = Rect2(151, 335, 50, 66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_houq0")

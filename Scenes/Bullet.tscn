@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqc63r2a5k4b0"]
+
+[ext_resource type="Texture2D" uid="uid://byrxhym44irda" path="res://Image/modular_ships.png" id="1_3biia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_881m4"]
+size = Vector2(11.1793, 16)
+
+[node name="Bullet" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3biia")
+region_enabled = true
+region_rect = Rect2(130, 32, 12, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.00445557, 0)
+shape = SubResource("RectangleShape2D_881m4")
